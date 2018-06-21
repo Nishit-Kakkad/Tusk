@@ -21,7 +21,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController {
     
-    @Autowired
     FeedbackDAO fdao = new FeedbackDAO();
     
     Feedback feedback;

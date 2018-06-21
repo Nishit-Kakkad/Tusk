@@ -6,6 +6,7 @@
 package com.nishit.tusk.dao;
 
 import com.nishit.tusk.entity.Feedback;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
