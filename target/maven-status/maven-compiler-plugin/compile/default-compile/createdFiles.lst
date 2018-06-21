@@ -1,4 +1,5 @@
 com\nishit\tusk\SpringConfig.class
+com\nishit\tusk\BeanConfiguration.class
 com\nishit\tusk\dao\FeedbackDAO.class
 com\nishit\tusk\Controller\IndexController.class
 com\nishit\tusk\App.class

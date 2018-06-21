@@ -5,9 +5,12 @@
  */
 package com.nishit.tusk.Controller;
 
+import com.nishit.tusk.BeanConfiguration;
 import com.nishit.tusk.dao.FeedbackDAO;
 import com.nishit.tusk.entity.Feedback;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,7 +24,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController {
     
-    FeedbackDAO fdao = new FeedbackDAO();
+    @Autowired
+    FeedbackDAO fdao;
     
     Feedback feedback;
     
@@ -32,6 +36,8 @@ public class IndexController {
                 @RequestParam("message") String message, 
                 @RequestParam("code") String code, 
                 @RequestParam("rating") int rating) {
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(BeanConfiguration.class);
+        fdao = ctx.getBean(FeedbackDAO.class);
         ModelAndView mv = new ModelAndView();
         feedback = new Feedback(name, email, regarding, message, code, rating);
         boolean result = fdao.addFeedback(feedback);

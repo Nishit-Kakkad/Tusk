@@ -18,7 +18,7 @@ import org.springframework.web.servlet.view.JstlView;
  * @author Nishit-TCS
  */
 @Configuration
-@ComponentScan(basePackages = "com.nishit.tusk.Controller")
+@ComponentScan(basePackages = {"com.nishit.tusk.Controller", "com.nishit.tusk.dao", "com.nishit.tusk.entity"})
 public class SpringConfig implements WebMvcConfigurer{
     @Bean
     public ViewResolver resolver() {
