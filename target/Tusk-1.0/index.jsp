@@ -12,7 +12,7 @@
         <title>Tusk</title>
     </head>
     <body>
-        <form action="addFeedback">
+        <form action="addFeedback" method="post">
             <label>Name : </label>
             <input type="text" name="name" placeholder="Enter your name"> <br>
             <label>Email : </label>

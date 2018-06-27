@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 public class FeedbackDAO {
     public boolean addFeedback(Feedback feedback) {
         boolean result = false;
+        System.out.println(feedback);
         return result;
     }
 }
