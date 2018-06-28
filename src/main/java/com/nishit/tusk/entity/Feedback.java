@@ -5,6 +5,10 @@
  */
 package com.nishit.tusk.entity;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -12,8 +16,11 @@ import org.springframework.stereotype.Component;
  *
  * @author Nishit-TCS
  */
-public class Feedback {
+@Entity
+@Table(name = "feedback")
+public class Feedback implements Serializable {
     private String name;
+    @Id
     private String email;
     private int regarding;
     private String message;

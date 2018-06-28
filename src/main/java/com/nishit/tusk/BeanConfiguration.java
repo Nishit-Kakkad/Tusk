@@ -6,7 +6,9 @@
 package com.nishit.tusk;
 
 import com.nishit.tusk.dao.FeedbackDAO;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -15,8 +17,8 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class BeanConfiguration {
-    @Bean
-    public FeedbackDAO getFeedbackDAO() {
-        return new FeedbackDAO();
-    }
+//    @Bean
+//    public FeedbackDAO getFeedbackDAO() {
+//        return new FeedbackDAO();
+//    }
 }
